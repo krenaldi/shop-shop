@@ -3,7 +3,7 @@ const { User, Product, Category, Order } = require('../models');
 const { signToken } = require('../utils/auth');
 
 const { STRIPE_KEY_TEST } = process.env;
-console.log(STRIPE_KEY_TEST);
+
 const stripe = require('stripe')(STRIPE_KEY_TEST);
 
 const resolvers = {
