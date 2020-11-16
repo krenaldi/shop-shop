@@ -12,7 +12,6 @@ import { QUERY_CHECKOUT } from '../../utils/queries';
 import { loadStripe } from '@stripe/stripe-js';
 
 const { REACT_APP_STRIPE_PK } = process.env;
-// console.log(REACT_APP_STRIPE_PK)
 
 const stripePromise = loadStripe(REACT_APP_STRIPE_PK);
 
