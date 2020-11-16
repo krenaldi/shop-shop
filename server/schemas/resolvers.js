@@ -4,7 +4,7 @@ const { signToken } = require('../utils/auth');
 
 const { STRIPE_KEY_TEST } = process.env;
 
-const stripe = require('stripe')(STRIPE_KEY_TEST);
+const stripe = require('stripe')(STRIPE_KEY_TEST.toString());
 
 const resolvers = {
   Query: {
