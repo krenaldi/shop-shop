@@ -9,6 +9,8 @@ function Success() {
     const [addOrder] = useMutation(ADD_ORDER);
 
     useEffect(() => {
+        const url = window.location.protocol + '//' + window.location.hostname;
+        console.log(url);
         async function saveOrder() {
             const cart = await idbPromise('cart', 'get');
             const products = cart.map(item => item._id);
@@ -23,7 +25,7 @@ function Success() {
             }
 
             setTimeout(() => {
-                window.location.assign('http://localhost:3000/orderHistory');
+                window.location.assign(url + '/orderHistory');
             }, 3000);
         }
         saveOrder()
