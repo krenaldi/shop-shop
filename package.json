@@ -1,7 +1,11 @@
 {
   "name": "mern-shopping",
   "version": "1.0.0",
-  "description": "",
+  "description": "Shop Shop",
+  "engines": {
+    "node": "14.x",
+    "npm": "6.x"
+  },
   "main": "server/server.js",
   "scripts": {
     "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
